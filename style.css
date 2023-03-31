@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive, sans-serif;
+}
+
+#emprego {
+    background-image: url("./assets/emprego-programador.jpg");
+}
+
+#casa {
+    background-image: url("https://www.salles.imb.br/admin/fotos_destaque/13232908_1604013343248088_6302168264450648482_n.jpg");
+}
+
+#carro {
+    background-image: url("https://cdn.motor1.com/images/mgl/BX2r06/s3/2024-range-rover-velar.jpg");
+}
+
+#Setup {
+    background-image: url("./assets/setup.webp");
+}
+
+#canada {
+    background-image: url("https://3raintercambio.com/wp-content/uploads/2017/03/image-1.jpg");
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #D8BFD8;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.painel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 50px;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+
+.painel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.painel.active {
+    flex: 5;
+}
+
+.painel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .painel:nth-of-type(4),
+    .painel:nth-of-type(5) {
+        display: none;
+    }
+
+}
+
+
+
+
